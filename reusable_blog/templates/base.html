@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+    <title>Stack - BootCamp Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/
+cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/blog">Blog</a>
+            </div>
+            <div id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/blog">Blog</a></li>
+                    <li><a href="/post/new/">New Post</a></li>
+                    <li><a href="/blog/top5/">Top5</a></li>
+                    <li><a href="/category">Category</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+                <h1> stack
+                    <p id="logo" class="lead">The Trials of a Bootcamp Developer</p>
+                </h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <!--blog entries-->
+                    {% block content %}
+                    {% endblock %}
+                    <!--blog entries-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+    </div>
+</footer>
+<!-- script references -->
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></scri
+pt>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstra
+p.min.js"></script>
+</body>
+</html>
